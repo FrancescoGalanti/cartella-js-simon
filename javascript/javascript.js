@@ -9,7 +9,7 @@
 
  $(document).ready(function(){
   // funzione sincrona //
-  setTimeout(myfunction, 3000);
+
   // test//
 
   // console.log("ciao")
@@ -29,15 +29,32 @@
 
  console.log(listaRandomNumber)
 
-
+setTimeout(myfunction, 3000);
 
   // intervallo di 30 secondi //
 
   // funzione asincrona //
-  function myfunction() {
-    // test//
-   console.log("ciao dopo 3 secondi");
-  }
+  function myfunction(){
+
+    while( listaRandomNumber.length < contatore)
+      var num = parseInt(prompt("Scegli un numero") );
+
+
+
+      if(listaRandomNumber.includes(num) === true){
+        alert("Complimenti hai azzecato il numero");
+
+      } else{
+        alert("Mi dispiace il numero non e quello della lista");
+      }
+
+      console.log(num)
+
+
+
+  };
+
+
 
 
  }); //<-- end here//

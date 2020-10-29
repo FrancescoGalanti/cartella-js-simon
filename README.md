@@ -1,1 +1,1 @@
-cartella js-simon
+js-pwdgen-wannabe

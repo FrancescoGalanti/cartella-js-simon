@@ -5,24 +5,19 @@
 
 
 
- // lavorazione dom di dropdown menu //
+ // Jquerys //
 
  $(document).ready(function(){
-   // Variabile per il dropdown //
-   var dropLinks = $(".with-dropwon > a");
-   var dropMenu = $(".with-dropwon > .dropdown-menu");
+  // funzione sincrona //
+  setTimeout(myfunction, 3000);
+  console.log("ciao");
 
-   // evento click dropdown //
-   dropLinks.click(function(){
-    // variabile per hide and show multipli //
-    var actualmenu = $(this).next(".dropdown-menu");
-    // funzione attiva disattiva menu //
-    dropMenu.not(actualmenu).hide();
+  // intervallo di 30 secondi //
 
-
-    // click dell evento show and hide //
-    actualmenu.toggle();
-   });
+  // funzione asincrona //
+  function myfunction() {
+   console.log("ciao dopo 3 secondi");
+  }
 
 
  }); //<-- end here//

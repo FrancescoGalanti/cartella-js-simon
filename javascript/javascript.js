@@ -24,7 +24,7 @@
         listaRandomNumber.push(number);
       }
 
-      alert(number);
+      alert("memorizza i seguenti numeri: " + number);
  }
 
  console.log(listaRandomNumber)
@@ -38,6 +38,8 @@
 
  function myfunction(){
    var scelta = [];
+   var azzeccati = 0;
+   var listanumeriazzecati = []
 
    while( scelta.length < contatore){
      var num = parseInt(prompt("Scegli un numero") );
@@ -46,19 +48,22 @@
 
      if(listaRandomNumber.includes(num) === true){
        alert("Complimenti hai azzecato il numero");
-
+       azzeccati = azzeccati + 1;
+       listanumeriazzecati.push(num);
      } else{
        alert("Mi dispiace il numero non e quello della lista");
      }
 
-     console.log(num);
+
 
    }
-   // console.log("ciao dopo 3 secondi")
+
+   console.log("hai azzeccato: " + azzeccati + "numeri")
+   console.log("i numeri chei hai azzeccato sono: " + listanumeriazzecati)
 
  }
 
-   console.log(listaRandomNumber)
+
 
 
 

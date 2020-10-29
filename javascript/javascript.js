@@ -33,7 +33,7 @@
 
  // funzione asincrona /
 
- setTimeout(myfunction, 3000)
+ setTimeout(myfunction, 30000)
  console.log("ciao");
 
  function myfunction(){
@@ -58,7 +58,7 @@
 
    }
 
-   console.log("hai azzeccato: " + azzeccati + "numeri")
+   console.log("hai azzeccato: " + azzeccati + " numeri")
    console.log("i numeri chei hai azzeccato sono: " + listanumeriazzecati)
 
  }

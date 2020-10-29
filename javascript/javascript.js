@@ -29,30 +29,45 @@
 
  console.log(listaRandomNumber)
 
-setTimeout(myfunction, 3000);
+ // intervallo di 30 secondi //
 
-  // intervallo di 30 secondi //
+ // funzione asincrona /
 
-  // funzione asincrona //
-  function myfunction(){
+ setTimeout(myfunction, 3000)
+ console.log("ciao");
 
-    while( listaRandomNumber.length < contatore)
-      var num = parseInt(prompt("Scegli un numero") );
+ function myfunction(){
+   var scelta = [];
 
-
-
-      if(listaRandomNumber.includes(num) === true){
-        alert("Complimenti hai azzecato il numero");
-
-      } else{
-        alert("Mi dispiace il numero non e quello della lista");
-      }
-
-      console.log(num)
+   while( scelta.length < contatore){
+     var num = parseInt(prompt("Scegli un numero") );
+     scelta.push(num);
 
 
+     if(listaRandomNumber.includes(num) === true){
+       alert("Complimenti hai azzecato il numero");
 
-  };
+     } else{
+       alert("Mi dispiace il numero non e quello della lista");
+     }
+
+     console.log(num);
+
+   }
+   // console.log("ciao dopo 3 secondi")
+
+ }
+
+   console.log(listaRandomNumber)
+
+
+
+
+
+
+
+
+
 
 
 

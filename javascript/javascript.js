@@ -24,8 +24,10 @@
         listaRandomNumber.push(number);
       }
 
-      alert("memorizza i seguenti numeri: " + number);
+
  }
+
+   alert("memorizza i seguenti numeri: " + listaRandomNumber);
 
  console.log(listaRandomNumber)
 
@@ -33,7 +35,7 @@
 
  // funzione asincrona /
 
- setTimeout(myfunction, 30000)
+ setTimeout(myfunction, 3000)
  console.log("ciao");
 
  function myfunction(){
@@ -43,20 +45,34 @@
 
    while( scelta.length < contatore){
      var num = parseInt(prompt("Scegli un numero") );
-     scelta.push(num);
 
 
-     if(listaRandomNumber.includes(num) === true){
-       alert("Complimenti hai azzecato il numero");
-       azzeccati = azzeccati + 1;
-       listanumeriazzecati.push(num);
+     while(isNaN(num)){
+       var num = parseInt(prompt("Scegli un numero non una lettera"));
+
+     }
+
+     if(! scelta.includes(num)){
+       scelta.push(num);
+       if(listaRandomNumber.includes(num) === true){
+         alert("Complimenti hai azzecato il numero");
+         azzeccati = azzeccati + 1;
+         listanumeriazzecati.push(num);
+       } else{
+         alert("Mi dispiace il numero non e quello della lista");
+       }
      } else{
-       alert("Mi dispiace il numero non e quello della lista");
+       alert("non ripetere i numeri")
      }
 
 
 
+
+
+
    }
+
+   console.log(scelta);
 
    console.log("hai azzeccato: " + azzeccati + " numeri")
    console.log("i numeri chei hai azzeccato sono: " + listanumeriazzecati)
